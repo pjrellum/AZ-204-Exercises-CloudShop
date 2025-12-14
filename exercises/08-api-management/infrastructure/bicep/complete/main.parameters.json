@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "uniqueSuffix": {
+      "value": "<your-suffix>"
+    },
+    "functionRuntime": {
+      "value": "dotnet-isolated"
+    },
+    "functionRuntimeVersion": {
+      "value": "8"
+    },
+    "publisherEmail": {
+      "value": "admin@cloudshop.example.com"
+    },
+    "publisherName": {
+      "value": "CloudShop"
+    }
+  }
+}

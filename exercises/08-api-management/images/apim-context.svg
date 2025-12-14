@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f0f0f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0078d4"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#50e6ff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="280" fill="#fafafa"/>
+
+  <!-- "You Are Here" banner -->
+  <rect x="165" y="15" width="150" height="30" rx="4" fill="#107c10"/>
+  <text x="240" y="36" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="white" font-weight="600">YOU ARE HERE</text>
+  <path d="M 240 45 L 240 55" stroke="#107c10" stroke-width="2"/>
+  <path d="M 235 50 L 240 58 L 245 50" fill="#107c10"/>
+
+  <!-- Partners -->
+  <rect x="30" y="70" width="90" height="60" rx="8" fill="url(#boxGrad)" stroke="#666" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75" y="105" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#333">Partners</text>
+
+  <!-- Arrow Partners to APIM -->
+  <path d="M 125 100 L 165 100" stroke="#0078d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- APIM Gateway (highlighted) -->
+  <rect x="170" y="60" width="140" height="80" rx="8" fill="#0078d4" filter="url(#shadow)" stroke="#107c10" stroke-width="3"/>
+  <text x="240" y="95" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="white" font-weight="600">APIM</text>
+  <text x="240" y="115" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="white">Gateway</text>
+
+  <!-- Arrow APIM to Function -->
+  <path d="M 315 100 L 355 100" stroke="#0078d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Orders API -->
+  <rect x="360" y="70" width="120" height="60" rx="8" fill="url(#boxGrad)" stroke="#0078d4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="420" y="95" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#333">Orders API</text>
+  <text x="420" y="112" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#666">(Function)</text>
+
+  <!-- Arrow Function to Blob -->
+  <path d="M 485 100 L 510 100 L 510 200 L 450 200" stroke="#50e6ff" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+
+  <!-- Blob Storage (grayed out - future) -->
+  <rect x="280" y="170" width="165" height="70" rx="8" fill="#e8e8e8" stroke="#999" stroke-width="1" stroke-dasharray="5,3" filter="url(#shadow)"/>
+  <text x="362" y="200" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" fill="#666">Blob Storage</text>
+  <text x="362" y="220" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#999">(Exercise 09)</text>
+</svg>

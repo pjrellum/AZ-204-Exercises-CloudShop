@@ -1,0 +1,75 @@
+site_name: CloudShop Order Pipeline
+site_description: AZ-204 Day 4 Exercises - API Management, Events, Messaging & Monitoring
+site_url: https://pjrellum.github.io/az-204-exercises-cloudshop/
+
+repo_url: https://github.com/pjrellum/az-204-exercises-cloudshop
+repo_name: az-204-exercises-cloudshop
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - macros
+
+extra:
+  # GitHub repository settings - change these once, use everywhere
+  github_org: pjrellum
+  github_repo: az-204-exercises-cloudshop
+  branch: main
+
+  # Derived URLs (use in docs as {{ repo_url }}, {{ exercises_url }}, etc.)
+  repo_url: https://github.com/pjrellum/az-204-exercises-cloudshop
+  exercises_url: https://github.com/pjrellum/az-204-exercises-cloudshop/tree/main/exercises
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - tables
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Architecture: architecture.md
+  - Exercises: exercises.md
+  - Troubleshooting: troubleshooting.md
+
+copyright: Build b4017bc | 2025-12-14 13:17 UTC

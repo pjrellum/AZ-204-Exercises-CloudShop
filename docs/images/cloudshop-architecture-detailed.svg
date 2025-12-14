@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800">
+  <defs>
+    <linearGradient id="sectionGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0078d4"/>
+      <stop offset="100%" style="stop-color:#50e6ff"/>
+    </linearGradient>
+    <linearGradient id="sectionGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#773adc"/>
+      <stop offset="100%" style="stop-color:#b380ff"/>
+    </linearGradient>
+    <linearGradient id="sectionGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e81123"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+    </linearGradient>
+    <linearGradient id="sectionGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff8c00"/>
+      <stop offset="100%" style="stop-color:#ffb347"/>
+    </linearGradient>
+    <linearGradient id="sectionGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#107c10"/>
+      <stop offset="100%" style="stop-color:#5cb85c"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f0f0f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0078d4"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#773adc"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e81123"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff8c00"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="800" fill="#fafafa"/>
+
+  <!-- ==================== INGESTION SECTION ==================== -->
+  <rect x="20" y="15" width="860" height="200" rx="8" fill="none" stroke="#0078d4" stroke-width="2"/>
+  <rect x="20" y="15" width="860" height="35" rx="8" fill="url(#sectionGrad1)"/>
+  <rect x="20" y="40" width="860" height="10" fill="url(#sectionGrad1)"/>
+  <text x="450" y="40" text-anchor="middle" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="600">INGESTION</text>
+
+  <!-- Partner Systems -->
+  <rect x="50" y="70" width="110" height="60" rx="6" fill="url(#boxGrad)" stroke="#666" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="105" y="95" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333">Partner</text>
+  <text x="105" y="110" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333">Systems</text>
+
+  <!-- Arrow to APIM -->
+  <path d="M 165 100 L 205 100" stroke="#0078d4" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- API Gateway -->
+  <rect x="210" y="65" width="150" height="70" rx="6" fill="#0078d4" filter="url(#shadow)"/>
+  <text x="285" y="90" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="white" font-weight="600">API Gateway</text>
+  <text x="285" y="108" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#b3d9ff">(Module 08)</text>
+  <text x="285" y="125" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9" fill="#d4e9ff">Rate limiting | Sub keys</text>
+
+  <!-- Arrow to Orders API -->
+  <path d="M 365 100 L 405 100" stroke="#0078d4" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Orders API -->
+  <rect x="410" y="65" width="130" height="70" rx="6" fill="url(#boxGrad)" stroke="#0078d4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="475" y="95" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333" font-weight="600">Orders API</text>
+  <text x="475" y="112" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#666">(Function)</text>
+
+  <!-- Arrow from Orders API to Blob -->
+  <path d="M 545 100 L 575 100 L 575 175 L 545 175" stroke="#50e6ff" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Batch Upload -->
+  <rect x="50" y="150" width="110" height="55" rx="6" fill="url(#boxGrad)" stroke="#666" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="105" y="175" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333">Batch</text>
+  <text x="105" y="192" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333">Upload</text>
+
+  <!-- Arrow to Blob -->
+  <path d="M 165 177 L 405 177" stroke="#50e6ff" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Blob Storage -->
+  <rect x="410" y="147" width="130" height="55" rx="6" fill="#50e6ff" filter="url(#shadow)"/>
+  <text x="475" y="172" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333" font-weight="600">Blob Storage</text>
+  <text x="475" y="190" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#333">orders/</text>
+
+  <!-- ==================== EVENT ROUTING SECTION ==================== -->
+  <rect x="20" y="230" width="860" height="150" rx="8" fill="none" stroke="#773adc" stroke-width="2"/>
+  <rect x="20" y="230" width="860" height="35" rx="8" fill="url(#sectionGrad2)"/>
+  <rect x="20" y="255" width="860" height="10" fill="url(#sectionGrad2)"/>
+  <text x="450" y="255" text-anchor="middle" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="600">EVENT ROUTING</text>
+
+  <!-- Vertical connector from Blob to Event Grid -->
+  <path d="M 475 207 L 475 285" stroke="#773adc" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Event Grid -->
+  <rect x="410" y="290" width="130" height="70" rx="6" fill="#773adc" filter="url(#shadow)"/>
+  <text x="475" y="315" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="white" font-weight="600">Event Grid</text>
+  <text x="475" y="333" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#d4c4f0">(Module 09)</text>
+  <text x="475" y="350" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9" fill="#e8dcff">Filter: *.json</text>
+
+  <!-- Arrow to Order Processor -->
+  <path d="M 545 325 L 635 325" stroke="#773adc" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Order Processor -->
+  <rect x="640" y="290" width="120" height="70" rx="6" fill="url(#boxGrad)" stroke="#773adc" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="700" y="320" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333" font-weight="600">Order</text>
+  <text x="700" y="337" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333">Processor</text>
+
+  <!-- ==================== MESSAGE PROCESSING SECTION ==================== -->
+  <rect x="20" y="395" width="860" height="170" rx="8" fill="none" stroke="#e81123" stroke-width="2"/>
+  <rect x="20" y="395" width="860" height="35" rx="8" fill="url(#sectionGrad3)"/>
+  <rect x="20" y="420" width="860" height="10" fill="url(#sectionGrad3)"/>
+  <text x="450" y="420" text-anchor="middle" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="600">MESSAGE PROCESSING</text>
+
+  <!-- Vertical connector from Order Processor to Service Bus -->
+  <path d="M 700 365 L 700 400 L 475 400 L 475 450" stroke="#e81123" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+
+  <!-- Service Bus -->
+  <rect x="410" y="455" width="130" height="70" rx="6" fill="#e81123" filter="url(#shadow)"/>
+  <text x="475" y="480" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="white" font-weight="600">Service Bus</text>
+  <text x="475" y="498" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#ffc4c4">(Module 10)</text>
+  <text x="475" y="515" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9" fill="#ffd9d9">Topics | Sessions</text>
+
+  <!-- Arrows to Worker Services -->
+  <path d="M 475 530 L 475 540 L 200 540 L 200 555" stroke="#e81123" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 475 530 L 475 555" stroke="#e81123" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 475 530 L 475 540 L 750 540 L 750 555" stroke="#e81123" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+
+  <!-- Inventory Service -->
+  <rect x="130" y="510" width="140" height="45" rx="6" fill="url(#boxGrad)" stroke="#e81123" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="200" y="538" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" fill="#333">Inventory Service</text>
+
+  <!-- Payment Service -->
+  <rect x="405" y="510" width="140" height="45" rx="6" fill="url(#boxGrad)" stroke="#e81123" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="475" y="538" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" fill="#333">Payment Service</text>
+
+  <!-- Shipping Service -->
+  <rect x="680" y="510" width="140" height="45" rx="6" fill="url(#boxGrad)" stroke="#e81123" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="750" y="538" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" fill="#333">Shipping Service</text>
+
+  <!-- ==================== ANALYTICS STREAM SECTION ==================== -->
+  <rect x="20" y="580" width="860" height="130" rx="8" fill="none" stroke="#ff8c00" stroke-width="2"/>
+  <rect x="20" y="580" width="860" height="35" rx="8" fill="url(#sectionGrad4)"/>
+  <rect x="20" y="605" width="860" height="10" fill="url(#sectionGrad4)"/>
+  <text x="450" y="605" text-anchor="middle" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="600">ANALYTICS STREAM</text>
+
+  <!-- Website -->
+  <rect x="50" y="630" width="110" height="60" rx="6" fill="url(#boxGrad)" stroke="#666" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="105" y="655" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#333">Website</text>
+  <text x="105" y="672" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#666">(clicks)</text>
+
+  <!-- Arrow to Event Hubs -->
+  <path d="M 165 660 L 275 660" stroke="#ff8c00" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+
+  <!-- Event Hubs -->
+  <rect x="280" y="625" width="150" height="70" rx="6" fill="#ff8c00" filter="url(#shadow)"/>
+  <text x="355" y="650" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="white" font-weight="600">Event Hubs</text>
+  <text x="355" y="668" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#ffe4c4">(Module 09)</text>
+  <text x="355" y="685" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9" fill="#fff0e0">Consumer groups</text>
+
+  <!-- Arrow to Consumers -->
+  <path d="M 435 660 L 505 660" stroke="#ff8c00" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+
+  <!-- Consumers -->
+  <rect x="510" y="620" width="150" height="80" rx="6" fill="url(#boxGrad)" stroke="#ff8c00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="585" y="645" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" fill="#333" font-weight="600">Consumers</text>
+  <text x="585" y="663" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#666">&#8226; Dashboard</text>
+  <text x="585" y="678" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#666">&#8226; ML Pipeline</text>
+  <text x="585" y="693" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#666">&#8226; Alerts</text>
+
+  <!-- Arrow to Capture -->
+  <path d="M 355 700 L 355 720 L 750 720 L 750 700" stroke="#ff8c00" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+
+  <!-- Capture -->
+  <rect x="690" y="645" width="120" height="50" rx="6" fill="url(#boxGrad)" stroke="#ff8c00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="750" y="668" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" fill="#333" font-weight="600">Capture</text>
+  <text x="750" y="685" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="#666">(archive)</text>
+
+  <!-- ==================== OBSERVABILITY SECTION ==================== -->
+  <rect x="20" y="725" width="860" height="60" rx="8" fill="none" stroke="#107c10" stroke-width="2"/>
+  <rect x="20" y="725" width="860" height="60" rx="8" fill="url(#sectionGrad5)" fill-opacity="0.15"/>
+  <rect x="350" y="738" width="200" height="35" rx="6" fill="#107c10" filter="url(#shadow)"/>
+  <text x="450" y="762" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="white" font-weight="600">Application Insights (Module 11)</text>
+
+  <!-- Monitoring icons/indicators -->
+  <circle cx="100" cy="755" r="8" fill="#107c10" opacity="0.6"/>
+  <circle cx="200" cy="755" r="8" fill="#107c10" opacity="0.6"/>
+  <circle cx="300" cy="755" r="8" fill="#107c10" opacity="0.6"/>
+  <circle cx="600" cy="755" r="8" fill="#107c10" opacity="0.6"/>
+  <circle cx="700" cy="755" r="8" fill="#107c10" opacity="0.6"/>
+  <circle cx="800" cy="755" r="8" fill="#107c10" opacity="0.6"/>
+
+  <!-- Dotted lines indicating monitoring -->
+  <path d="M 100 747 L 100 700" stroke="#107c10" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <path d="M 200 747 L 200 560" stroke="#107c10" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <path d="M 300 747 L 300 560" stroke="#107c10" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <path d="M 600 747 L 600 700" stroke="#107c10" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <path d="M 700 747 L 700 365" stroke="#107c10" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <path d="M 800 747 L 800 560" stroke="#107c10" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+</svg>
