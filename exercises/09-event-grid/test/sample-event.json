@@ -1,0 +1,21 @@
+[
+  {
+    "id": "b6e8b7c2-1e5f-4b8a-9d3c-7f6e5d4c3b2a",
+    "eventType": "Microsoft.Storage.BlobCreated",
+    "subject": "/blobServices/default/containers/orders/blobs/order001.json",
+    "eventTime": "2024-01-15T10:30:00.1234567Z",
+    "data": {
+      "api": "PutBlob",
+      "clientRequestId": "abc123",
+      "requestId": "def456",
+      "eTag": "0x8D9F1234567890A",
+      "contentType": "application/json",
+      "contentLength": 256,
+      "blobType": "BlockBlob",
+      "url": "https://stcloudshopxyz.blob.core.windows.net/orders/order001.json",
+      "sequencer": "0000000000000001"
+    },
+    "dataVersion": "",
+    "metadataVersion": "1"
+  }
+]
